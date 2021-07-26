@@ -50,7 +50,7 @@ app.post("/todos", (request, response) => {
     id: uuidV4(),
     title,
     description,
-    createdAt: new Date().toLocaleDateString(),
+    createdAt: new Date().toLocaleDateString('pt-br'),
     status,
   };
 
