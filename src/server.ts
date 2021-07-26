@@ -3,6 +3,7 @@ import cors from 'cors';
 import { v4 as uuidV4 } from 'uuid';
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors());
@@ -97,6 +98,6 @@ app.delete("/todos/:id", (request, response) => {
   return response.status(204).send();
 });
 
-app.listen(process.env.PORT || 3333, () => {
+app.listen(PORT, () => {
   console.log("Server is running!")
 });
