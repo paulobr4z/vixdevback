@@ -73,7 +73,7 @@ app.put("/todos/:id", (request, response) => {
     id: uuidV4(),
     title,
     description,
-    date: new Date(),
+    createdAt: new Date().toLocaleDateString('pt-br'),
     status,
   };
 
