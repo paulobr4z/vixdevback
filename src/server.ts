@@ -23,25 +23,13 @@ app.post("/signup", (request, response) => {
     name,
     email,
     password,
-    createdAt: new Date(),
+    createdAt: new Date().toLocaleDateString('pt-br'),
   };
 
   users.push(user);
 
   return response.json(user);
 });
-
-// app.post("/login", (request, response) => {
-//   const { email, password } = request.body;
-
-//   const userLogin = users.findIndex(user => user.email === email);
-
-//   if (userLogin) {
-    
-//   }
-
-//   return response.json(login);
-// });
 
 app.post("/todos", (request, response) => {
   const { title, description, status} = request.body;
